@@ -13,6 +13,11 @@ body, html {
     scroll-behavior: smooth;
 }
 
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .transition-screen {
     position: fixed;
     background: #fff;
@@ -107,6 +112,8 @@ body, html {
     grid-template-areas: "card card scroll-2" "footer footer footer";
 }
 
+/* home */
+
 #part-2 .card {
     display: flex;
     flex-direction: column;
@@ -137,6 +144,25 @@ body, html {
     margin-top: 50px;
 }
 
+/* about */
+
+#part-2 .card-img {
+    height: 240px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+#part-2 .bio-p  {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#part-2 .bio-cv {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
 /* FRAGMENTS */
 
 /* header*/
@@ -155,10 +181,8 @@ body, html {
 
 .header a {
     float: left;
-    color: #ffffff;
     text-align: center;
     padding: 15px 15px;
-    text-decoration: none;
 }
 
 .header a:hover {
@@ -183,10 +207,8 @@ body, html {
 }
 
 .footer-links a {
-    color: #ffffff;
     padding-right: 15px;
     padding-left: 15px;
-    text-decoration: none;
     font-weight: bold;
 }
 
@@ -194,4 +216,4 @@ body, html {
     font-weight: bolder;
 }
 
-/* home */
+

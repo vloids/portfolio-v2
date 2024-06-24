@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>DIOP.TECH</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link th:href="@{/style.css}" rel="stylesheet" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <script th:src="@{/js/transition.js}"></script>
+</head>
+<body>
+<div id="transition-screen" class="transition-screen"></div>
+<div class="container" id="part-1">
+    <div class="header" th:replace="~{fragments/header :: header}"></div>
+    <div class="title">
+        <h1>ABOUT</h1>
+        <h1>AMINATA</h1>
+        <h2>Biography and CV</h2>
+    </div>
+    <div class="scroll-1">
+        <a href="#part-2" class="transition">
+            <img src="/images/scroll.svg" alt="Scroll" class="scroll-btn">
+        </a>
+    </div>
+</div>
+<div class="container" id="part-2">
+    <div class="card">
+        <img src="/images/filler.jpg" alt="Filler image" class="card-img">
+        <p class="bio-p">My childhood was a vibrant tapestry of diverse experiences, as I was born in Spain and moved to Belgium at a young age. These formative years instilled in me a deep appreciation for different perspectives and a passion for discovering new horizons.</p>
+        <p class="bio-p">In 2018, I proudly graduated from De Dames in Antwerp, armed with a diploma in Economics and Modern Languages. My thirst for knowledge led me to the esteemed KU Leuven in 2019, where I delved into the intricacies of law.</p>
+        <p class="bio-p">My journey took an exciting turn when I discovered the world of programming. Intrigued by its power to transform ideas into tangible realities, I enrolled in the Programming program at Thomas More Antwerp. This newfound passion ignited a spark within me, propelling me towards a future filled with innovation and technological advancements.</p>
+        <p class="bio-p">Throughout my life, my multicultural upbringing has been a constant source of inspiration. Surrounded by a diverse array of traditions, customs, and perspectives, I developed a deep understanding of the world's rich tapestry. This cultural fluency has shaped my approach to problem-solving, enabling me to view challenges from multiple angles and find creative solutions.</p>
+        <p class="bio-p">As I embark on my journey as a programmer, I am eager to harness the power of technology to connect people, bridge cultures, and make a positive impact on the world. My passion for programming is fueled by a desire to create meaningful experiences that enrich lives and empower individuals.</p>
+        <a class="bio-cv transition" href="/aminata-diop-cv.pdf" download>Get my CV!</a>
+    </div>
+    <div class="scroll-2">
+        <a href="#part-1" class="transition">
+            <img src="/images/scroll.svg" alt="Scroll" class="scroll-btn">
+        </a>
+    </div>
+    <div class="footer" th:replace="~{fragments/footer :: footer}"></div>
+</div>
+</body>
+</html>
