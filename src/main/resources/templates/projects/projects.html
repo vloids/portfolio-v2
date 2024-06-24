@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>DIOP.TECH</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link th:href="@{/style.css}" rel="stylesheet" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <script th:src="@{/js/transition.js}"></script>
+</head>
+<body>
+<div id="transition-screen" class="transition-screen"></div>
+<div class="container" id="part-1">
+    <div class="header" th:replace="~{fragments/header :: header}"></div>
+    <div class="title">
+        <h1>PROJECTS</h1>
+        <h2>Projects I've been working on</h2>
+    </div>
+    <div class="scroll-1">
+        <a href="#part-2-p" class="transition">
+            <img src="/images/scroll.svg" alt="Scroll" class="scroll-btn">
+        </a>
+    </div>
+</div>
+<div class="container" id="part-2-p">
+    <div class="card">
+        <div class="project-card transition-card" th:each="project : ${projects}">
+            <a th:href="|/project/${project.id}|">
+                <h2 th:text="|${project.name} (${project.technologies})|">Project Name</h2>
+                <p th:text="${project.description}">Project Description</p>
+            </a>
+        </div>
+    </div>
+    <div class="scroll-2">
+        <a href="#part-1" class="transition">
+            <img src="/images/scroll.svg" alt="Scroll" class="scroll-btn">
+        </a>
+    </div>
+    <div class="footer" th:replace="~{fragments/footer :: footer}"></div>
+</div>
+</body>
+</html>
