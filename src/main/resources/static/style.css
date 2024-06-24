@@ -1,0 +1,181 @@
+* {
+    margin:	0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    background: url('images/part-2.png') no-repeat center center fixed;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+.header { grid-area: header; }
+.footer { grid-area: footer; }
+.title { grid-area: title; }
+.scroll-1 { grid-area: scroll-1; }
+.scroll-2 { grid-area: scroll-2; }
+.card { grid-area: card; }
+
+/* grid structure */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.3fr;
+    gap: 0 0;
+}
+
+/* scrolling */
+
+.scroll-btn {
+    width: 100px;
+    height: 100px;
+}
+
+.scroll-1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 80px;
+}
+
+.scroll-2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.transition {
+    opacity: 0.5;
+    transition: opacity 1s ease 0s;
+}
+
+.transition:hover {
+    opacity: 1;
+}
+
+/* part 1: fixed image */
+
+#part-1 {
+    height: 100vh;
+    background: url('images/part-1.png') no-repeat center center fixed;
+    background-size: cover;
+    grid-template-rows: 1fr 0.1fr;
+    grid-template-areas: "header header header" "title title scroll-1";
+}
+
+#part-1 .title {
+    margin: 20px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.12),
+    0 12px 13px rgba(0, 0, 0, 0.17),
+    0 -3px 5px rgba(0, 0, 0, 0.09);
+}
+
+#part-1 h1 {
+    font-size: 5em;
+}
+
+#part-1 h2 {
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+/* part 2: fluid bg */
+
+#part-2 {
+    height: 100vh;
+    grid-template-rows: 1fr 0.1fr;
+    grid-template-areas: "card card scroll-2" "footer footer footer";
+}
+
+#part-2 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: #2a73fd;
+    margin: 50px 0 10px 50px;
+    padding: 50px;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px,
+    rgba(0, 0, 0, 0.12) 0 -12px 30px,
+    rgba(0, 0, 0, 0.12) 0 4px 6px,
+    rgba(0, 0, 0, 0.17) 0 12px 13px,
+    rgba(0, 0, 0, 0.09) 0 -3px 5px;
+}
+
+#part-2 .quote, #part-2 .author {
+    font-size: 3.5em;
+    font-weight: normal;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.12),
+    0 12px 13px rgba(0, 0, 0, 0.17),
+    0 -3px 5px rgba(0, 0, 0, 0.09);
+}
+
+#part-2 .intro {
+    font-size: 1.7em;
+    font-weight: lighter;
+    margin-top: 25px;
+}
+
+/* FRAGMENTS */
+
+/* header*/
+
+.header {
+    overflow: hidden;
+    font-size: 1.5em;
+}
+
+.header-title {
+    font-weight: bold;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.12),
+    0 12px 13px rgba(0, 0, 0, 0.17),
+    0 -3px 5px rgba(0, 0, 0, 0.09);
+}
+
+.header a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+
+.header a:hover {
+    font-weight: bold;
+}
+
+.header-navbar {
+    float: right;
+}
+
+/* footer */
+
+.footer {
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+.footer-links {
+    margin: 10px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    font-weight: bolder;
+}
+
+/* home */

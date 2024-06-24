@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>diop.tech</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/style.css}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,900;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header" th:fragment="header">
+    <a class="header-title" href = "/">DIOP.TECH</a>
+    <div class="header-navbar">
+        <a href="/home">HOME</a>
+        <a href="/about">ABOUT ME</a>
+        <a href="/projects">PROJECTS</a>
+        <a href="/contact">CONTACT</a>
+    </div>
+</header>
+</body>
+</html>
