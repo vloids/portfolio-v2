@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>diop.tech</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link th:href="@{/style.css}" rel="stylesheet" />
+</head>
+<body><div class="container" id="part-1">
+    <div class="header" th:replace="~{fragments/header :: header}"></div>
+    <div class="title">
+        <h1>PICK</h1>
+        <h1>TITLE</h1>
+        <h2>Pick Subtitle</h2>
+    </div>
+    <div class="scroll-1">
+        <a href="#part-2" class="transition">
+            <img src="/images/scroll.svg" alt="Scroll" class="scroll-btn">
+        </a>
+    </div>
+</div>
+<div class="container" id="part-2">
+    <div class="card">
+
+    </div>
+    <div class="scroll-2">
+        <a href="#part-1" class="transition">
+            <img src="/images/scroll.svg" alt="Scroll" class="scroll-btn">
+        </a>
+    </div>
+    <div class="footer" th:replace="~{fragments/footer :: footer}"></div>
+</div>
+</body>
+</html>
