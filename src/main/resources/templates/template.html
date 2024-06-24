@@ -9,8 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,900;1,300;1,400&display=swap" rel="stylesheet">
     <link th:href="@{/style.css}" rel="stylesheet" />
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <script th:src="@{/js/transition.js}"></script>
 </head>
-<body><div class="container" id="part-1">
+<body>
+<div id="transition-screen" class="transition-screen"></div>
+<div class="container" id="part-1">
     <div class="header" th:replace="~{fragments/header :: header}"></div>
     <div class="title">
         <h1>PICK</h1>

@@ -9,8 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,900;1,300;1,400&display=swap" rel="stylesheet">
     <link th:href="@{/style.css}" rel="stylesheet" />
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <script th:src="@{/js/transition.js}"></script>
 </head>
-<body><div class="container" id="part-1">
+<body>
+<div id="transition-screen" class="transition-screen"></div>
+<div class="container" id="part-1">
     <div class="header" th:replace="~{fragments/header :: header}"></div>
     <div class="title">
         <h1>DIOP</h1>
@@ -25,7 +28,7 @@
 </div>
 <div class="container" id="part-2">
     <div class="card">
-        <h1 class="quote">❝ ❞<br>You can't use up creativity. The more you use, the more you have.</h1>
+        <h1 class="quote">❝ ❞<br>You can't use up creativity.<br>The more you use,<br> the more you have.</h1>
         <h2 class="author">- Maya Angelou</h2>
         <h3 class="intro">Welcome to my portfolio!<br>I'm Aminata Diop, a student programmer at Thomas More Antwerp.<br>Feel free to contact me with any questions or if you are interested in working with me.</h3>
     </div>

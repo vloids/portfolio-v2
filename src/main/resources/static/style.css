@@ -13,6 +13,22 @@ body, html {
     scroll-behavior: smooth;
 }
 
+.transition-screen {
+    position: fixed;
+    background: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
 .header { grid-area: header; }
 .footer { grid-area: footer; }
 .title { grid-area: title; }
@@ -50,7 +66,7 @@ body, html {
 
 .transition {
     opacity: 0.5;
-    transition: opacity 1s ease 0s;
+    transition: opacity 2s ease 0s;
 }
 
 .transition:hover {
@@ -118,7 +134,7 @@ body, html {
 #part-2 .intro {
     font-size: 1.7em;
     font-weight: lighter;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 /* FRAGMENTS */
